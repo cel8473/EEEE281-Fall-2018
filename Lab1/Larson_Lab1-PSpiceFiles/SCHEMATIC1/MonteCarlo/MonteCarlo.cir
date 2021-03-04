@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Larson_Lab1-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+** Creating circuit file "MonteCarlo.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.MC 1001 TRAN V([VB]) MAX OUTPUT ALL SEED=256 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

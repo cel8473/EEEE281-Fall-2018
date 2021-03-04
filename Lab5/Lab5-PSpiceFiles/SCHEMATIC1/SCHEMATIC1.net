@@ -1,0 +1,15 @@
+* source LAB5
+R_R1         VSUPCIRCUIT1 VCCIRCUIT1 R_R1 {R} TC=0,0 
+.model        R_R1 RES R=1 DEV=10% TC1=0 TC2=0
+C_C1         0 VCCIRCUIT1 C_C1 {C}  TC=0,0 
+.model        C_C1 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0
+C_C2         VRCIRCUIT2 VSUPCIRCUIT2 C_C2 {C}  TC=0,0 
+.model        C_C2 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0
+R_R2         0 VRCIRCUIT2 R_R2 {R} TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+V_V1         VSUPCIRCUIT1 0  
++PULSE 0 5 0 1p 1p {PW} {PER}
+V_V2         VSUPCIRCUIT2 0  
++PULSE 0 5 0 1p 1p {PW} {PER}
+.PARAM  tau={r*c} per={twentytau} tentau={10*tau} freq={1/per} twentytau=
++ {20*tau} c=0.01u pw={tentau} r=10k runtotime={per}

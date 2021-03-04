@@ -1,0 +1,80 @@
+(ExpressProject "Lab4"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\lab4.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\lab4-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab4-pspicefiles\schematic1\lab4sim.sim"
+        (DisplayName "SCHEMATIC1-Lab4Sim")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\lab4-pspicefiles\schematic1\monte.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab4-pspicefiles\schematic1\monte.sim"
+        (DisplayName "SCHEMATIC1-Monte")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (uA741
+      (FullPartName "uA741.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\OPAMP.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\SPECIAL.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "L:\CIRCUITS_1_Labs\pspice_LIBRARY_Circuits1")
+  (MPSSessionName "cel8473")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "E:\Circuits-I\Lab4\lab4.dsn")
+      (Path "Design Resources" "E:\Circuits-I\Lab4\lab4.dsn" "SCHEMATIC1")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 205"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 1116 52 296")
+        (Scroll "0 0")
+        (Zoom "166")
+        (Occurrence "/"))
+      (Path "E:\CIRCUITS-I\LAB4\LAB4.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

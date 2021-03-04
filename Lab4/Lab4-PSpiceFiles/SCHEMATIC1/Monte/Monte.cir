@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-Monte"  [ E:\Circuits-I\Lab4\Lab4-PSpiceFiles\SCHEMATIC1\Monte.sim ] 
+
+** Creating circuit file "Monte.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3ms 0 
+.MC 100 TRAN V([VOUTINV]) MAX OUTPUT ALL SEED=256 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

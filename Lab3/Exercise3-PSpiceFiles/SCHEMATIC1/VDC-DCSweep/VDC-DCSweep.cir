@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-VDC-DCSweep"  [ E:\Circuits-I\Lab3\Exercise3-PSpiceFiles\SCHEMATIC1\VDC-DCSweep.sim ] 
+
+** Creating circuit file "VDC-DCSweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC DEC PARAM RL 1 1000000 10 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

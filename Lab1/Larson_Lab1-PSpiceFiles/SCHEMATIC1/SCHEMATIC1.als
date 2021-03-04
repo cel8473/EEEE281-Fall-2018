@@ -1,0 +1,8 @@
+.ALIASES
+R_R1            R1(1=N00187 2=VA ) CN @LARSON_LAB1.SCHEMATIC1(sch_1):INS26@ANALOG.R.Normal(chips)
+R_R2            R2(1=VA 2=VB ) CN @LARSON_LAB1.SCHEMATIC1(sch_1):INS88@ANALOG.R.Normal(chips)
+V_V1            V1(+=N00187 -=0 ) CN @LARSON_LAB1.SCHEMATIC1(sch_1):INS145@SOURCE.VDC.Normal(chips)
+R_RL            RL(1=0 2=VB ) CN @LARSON_LAB1.SCHEMATIC1(sch_1):INS220@ANALOG.R.Normal(chips)
+_    _(VA=VA)
+_    _(VB=VB)
+.ENDALIASES

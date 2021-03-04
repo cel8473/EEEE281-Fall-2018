@@ -1,0 +1,8 @@
+* source LARSON_LAB1
+R_R1         N00187 VA R_R1 5.6k TC=0,0 
+.model        R_R1 RES R=1 DEV=10% TC1=0 TC2=0
+R_R2         VA VB R_R2 5.6k TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+V_V1         N00187 0 5Vdc
+R_RL         0 VB R_RL 1k TC=0,0 
+.model        R_RL RES R=1 DEV=10% TC1=0 TC2=0

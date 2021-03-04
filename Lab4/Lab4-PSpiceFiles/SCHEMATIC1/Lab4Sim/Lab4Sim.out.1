@@ -1,0 +1,55 @@
+
+**** 03/31/19 18:25:20 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab4Sim"  [ E:\Circuits-I\Lab4\lab4-pspicefiles\schematic1\lab4sim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Lab4Sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB4
+V_V1         POSSUPPLY 0 {Vsupply}
+V_V2         0 NEGSUPPLY {Vsupply}
+X_U1         N00878 VINNON POSSUPPLY NEGSUPPLY VOUTNON uA741
+R_Rin         0 VINNON  {Rin} TC=0,0 
+R_RfNonInvert         VINNON VOUTNON  {RfNoninverting} TC=0,0 
+R_Rin1         VININV N00580  {Rin} TC=0,0 
+X_U2         0 N00580 POSSUPPLY NEGSUPPLY VOUTINV uA741
+R_RfInvert         N00580 VOUTINV  {RfInverting} TC=0,0 
+V_V3         VININV 0  
++SIN 0 0.5 {Freq} 0 0 0
+V_V4         N00878 0  
++SIN 0 0.5 {Freq} 0 0 0
+.PARAM  vsupply=12 freq=1k rfinverting=1k rfnoninverting=1k rin=1k runtotime=
+-----------------------------------------------------------------------------$
+ERROR(ORPSIM-16470): Missing value for param
+{3*1/freq}
+$
+ERROR(ORPSIM-16316): Invalid device
+
+**** RESUMING Lab4Sim.cir ****
+.END
+

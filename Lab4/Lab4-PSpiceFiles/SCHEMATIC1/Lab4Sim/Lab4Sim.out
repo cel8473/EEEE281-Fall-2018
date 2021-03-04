@@ -1,0 +1,215 @@
+
+**** 04/02/19 14:46:58 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab4Sim"  [ E:\Circuits-I\Lab4\lab4-pspicefiles\schematic1\lab4sim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Lab4Sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB4
+V_V1         POSSUPPLY 0 {Vsupply}
+V_V2         0 NEGSUPPLY {Vsupply}
+X_U1         N00878 VINNON POSSUPPLY NEGSUPPLY VININV uA741
+R_Rin         0 VINNON R_Rin {Rin} TC=0,0 
+.model        R_Rin RES R=1 DEV=10% TC1=0 TC2=0
+R_RfNonInvert         VINNON VININV R_RfNonInvert {RfNoninverting} TC=0,0 
+.model        R_RfNonInvert RES R=1 DEV=10% TC1=0 TC2=0
+R_Rin1         VININV N00580 R_Rin1 {Rin} TC=0,0 
+.model        R_Rin1 RES R=1 DEV=10% TC1=0 TC2=0
+X_U2         0 N00580 POSSUPPLY NEGSUPPLY VOUTINV uA741
+R_RfInvert         N00580 VOUTINV R_RfInvert {RfInverting} TC=0,0 
+.model        R_RfInvert RES R=1 DEV=10% TC1=0 TC2=0
+V_V4         N00878 0  
++SIN 0 0.5 {Freq} 0 0 0
+.PARAM  vsupply=20 freq=1k rfinverting=4k rfnoninverting=3k rin=1k
+
+**** RESUMING Lab4Sim.cir ****
+.END
+
+**** 04/02/19 14:46:58 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab4Sim"  [ E:\Circuits-I\Lab4\lab4-pspicefiles\schematic1\lab4sim.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 04/02/19 14:46:58 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab4Sim"  [ E:\Circuits-I\Lab4\lab4-pspicefiles\schematic1\lab4sim.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 04/02/19 14:46:58 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab4Sim"  [ E:\Circuits-I\Lab4\lab4-pspicefiles\schematic1\lab4sim.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_Rin           R_RfNonInvert   R_Rin1          R_RfInvert      
+           R    1               1               1               1            
+
+
+**** 04/02/19 14:46:58 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab4Sim"  [ E:\Circuits-I\Lab4\lab4-pspicefiles\schematic1\lab4sim.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00580) 19.26E-06 (N00878)    0.0000 (VININV) 316.3E-06 (VINNON) 19.25E-06     
+
+(X_U1.6)-35.77E-09 (X_U1.7) 336.1E-06 (X_U1.8) 336.1E-06 (X_U1.9)    0.0000     
+
+(X_U2.6) 82.84E-09 (X_U2.7)-860.6E-06 (X_U2.8)-860.6E-06 (X_U2.9)    0.0000     
+
+(VOUTINV)-849.8E-06                   (X_U1.10)    -.6077                       
+
+(X_U1.11)   19.9600                   (X_U1.12)   19.9600                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)   19.0000                   (X_U1.54)  -19.0000                       
+
+(X_U1.90) 396.0E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                       
+
+(X_U2.10)    -.6077                   (X_U2.11)   19.9600                       
+
+(X_U2.12)   19.9600                   (X_U2.13)    -.5938                       
+
+(X_U2.14)    -.5938                   (X_U2.53)   19.0000                       
+
+(X_U2.54)  -19.0000                   (X_U2.90)-217.3E-06                       
+
+(X_U2.91)   40.0000                   (X_U2.92)  -40.0000                       
+
+(X_U2.99)    0.0000                   (NEGSUPPLY)  -20.0000                     
+
+(POSSUPPLY)   20.0000                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.435E-03
+    V_V2        -4.436E-03
+    V_V4        -7.972E-08
+    X_U1.vb     -3.577E-13
+    X_U1.vc      1.900E-11
+    X_U1.ve      2.160E-11
+    X_U1.vlim    3.960E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+    X_U2.vb      8.284E-13
+    X_U2.vc      1.900E-11
+    X_U2.ve      2.160E-11
+    X_U2.vlim   -2.173E-07
+    X_U2.vlp    -4.000E-11
+    X_U2.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.77E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/02/19 14:46:58 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab4Sim"  [ E:\Circuits-I\Lab4\lab4-pspicefiles\schematic1\lab4sim.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .28
+

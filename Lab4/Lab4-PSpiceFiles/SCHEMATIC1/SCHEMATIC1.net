@@ -1,0 +1,16 @@
+* source LAB4
+V_V1         POSSUPPLY 0 {Vsupply}
+V_V2         0 NEGSUPPLY {Vsupply}
+X_U1         N00878 VINNON POSSUPPLY NEGSUPPLY VININV uA741
+R_Rin         0 VINNON R_Rin {Rin} TC=0,0 
+.model        R_Rin RES R=1 DEV=10% TC1=0 TC2=0
+R_RfNonInvert         VINNON VININV R_RfNonInvert {RfNoninverting} TC=0,0 
+.model        R_RfNonInvert RES R=1 DEV=10% TC1=0 TC2=0
+R_Rin1         VININV N00580 R_Rin1 {Rin} TC=0,0 
+.model        R_Rin1 RES R=1 DEV=10% TC1=0 TC2=0
+X_U2         0 N00580 POSSUPPLY NEGSUPPLY VOUTINV uA741
+R_RfInvert         N00580 VOUTINV R_RfInvert {RfInverting} TC=0,0 
+.model        R_RfInvert RES R=1 DEV=10% TC1=0 TC2=0
+V_V4         N00878 0  
++SIN 0 0.5 {Freq} 0 0 0
+.PARAM  vsupply=20 freq=1k rfinverting=4k rfnoninverting=3k rin=1k

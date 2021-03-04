@@ -1,0 +1,3618 @@
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "MonteCarlo.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 
+.MC 100 TRAN V([VCCIRCUIT1]) MAX OUTPUT ALL SEED=256 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB5
+R_R1         VSUPCIRCUIT1 VCCIRCUIT1 R_R1 {R} TC=0,0 
+.model        R_R1 RES R=1 DEV=10% TC1=0 TC2=0
+C_C1         0 VCCIRCUIT1 C_C1 {C}  TC=0,0 
+.model        C_C1 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0
+C_C2         VRCIRCUIT2 VSUPCIRCUIT2 C_C2 {C}  TC=0,0 
+.model        C_C2 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0
+R_R2         0 VRCIRCUIT2 R_R2 {R} TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+V_V1         VSUPCIRCUIT1 0  
++PULSE 0 5 0 1p 1p {PW} {PER}
+V_V2         VSUPCIRCUIT2 0  
++PULSE 0 5 0 1p 1p {PW} {PER}
+.PARAM  tau={r*c} per={twentytau} tentau={10*tau} freq={1/per} twentytau=
++ {20*tau} c=0.01u pw={tentau} r=10k runtotime={per}
+
+**** RESUMING MonteCarlo.cir ****
+.END
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R2            
+           R    1               1            
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               C_C1            C_C2            
+           C    1               1            
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO NOMINAL
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 2
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 3
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 4
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 5
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 6
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 7
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 8
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 9
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 10
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 11
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 12
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 13
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 14
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 15
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 16
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 17
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 18
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 19
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 20
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 21
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 22
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 23
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 24
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 25
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 26
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 27
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 28
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 29
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 30
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 31
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 32
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 33
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 34
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 35
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 36
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 37
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 38
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 39
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 40
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 41
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 42
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 43
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 44
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 45
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 46
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 47
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 48
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 49
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 50
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 51
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 52
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 53
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 54
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 55
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 56
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 57
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 58
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 59
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 60
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 61
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 62
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 63
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 64
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 65
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 66
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 67
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 68
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 69
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 70
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 71
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 72
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 73
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 74
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 75
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 76
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 77
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 78
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 79
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 80
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 81
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 82
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 83
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 84
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 85
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 86
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 87
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 88
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 89
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 90
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 91
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 92
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 93
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 94
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 95
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 96
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 97
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 98
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 99
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 100
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     SORTED DEVIATIONS OF V(VCCIRCUIT1) TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO SUMMARY
+
+******************************************************************************
+
+
+
+
+
+ RUN                    MAXIMUM VALUE
+
+Pass   63               5      at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass    6               5      at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   69               5      at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   92               5      at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass    5               5      at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   81               5      at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   71               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   56               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   97               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   80               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   90               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   23               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   51               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   61               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   93               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass    9               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   48               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   49               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   33               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   64               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   96               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   82               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   18               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   36               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   30               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   25               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   99               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   38               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   28               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   57               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   19               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   67               4.9999 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   66               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   87               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   22               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   32               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   55               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   91               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   31               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   27               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   62               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   59               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   88               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   70               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   76               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   75               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   78               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   12               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   86               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   94               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   39               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   45               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   73               4.9998 at T =    1.0000E-03
+                        ( 100   % of Nominal)
+
+Pass   77               4.9998 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   17               4.9998 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass  100               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   34               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass    8               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   50               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   26               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   41               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   21               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   52               4.9997 at T =    1.0000E-03
+                        (  99.999% of Nominal)
+
+Pass   13               4.9997 at T =    1.0000E-03
+                        (  99.998% of Nominal)
+
+Pass   46               4.9997 at T =    1.0000E-03
+                        (  99.998% of Nominal)
+
+Pass   15               4.9997 at T =    1.0000E-03
+                        (  99.998% of Nominal)
+
+Pass    4               4.9997 at T =    1.0000E-03
+                        (  99.998% of Nominal)
+
+Pass   43               4.9997 at T =    1.0000E-03
+                        (  99.998% of Nominal)
+
+Pass   35               4.9996 at T =    1.0000E-03
+                        (  99.997% of Nominal)
+
+Pass   58               4.9996 at T =    1.0000E-03
+                        (  99.997% of Nominal)
+
+Pass   29               4.9996 at T =    1.0000E-03
+                        (  99.997% of Nominal)
+
+Pass   14               4.9996 at T =    1.0000E-03
+                        (  99.997% of Nominal)
+
+Pass   85               4.9996 at T =    1.0000E-03
+                        (  99.997% of Nominal)
+
+Pass   11               4.9996 at T =    1.0000E-03
+                        (  99.997% of Nominal)
+
+Pass   47               4.9996 at T =    1.0000E-03
+                        (  99.996% of Nominal)
+
+Pass    3               4.9996 at T =    1.0000E-03
+                        (  99.996% of Nominal)
+
+Pass   54               4.9995 at T =    1.0000E-03
+                        (  99.995% of Nominal)
+
+Pass   68               4.9995 at T =    1.0000E-03
+                        (  99.995% of Nominal)
+
+Pass    2               4.9995 at T =    1.0000E-03
+                        (  99.995% of Nominal)
+
+Pass   42               4.9995 at T =    1.0000E-03
+                        (  99.994% of Nominal)
+
+Pass   20               4.9995 at T =    1.0000E-03
+                        (  99.994% of Nominal)
+
+Pass   72               4.9995 at T =    1.0000E-03
+                        (  99.994% of Nominal)
+
+Pass   65               4.9995 at T =    1.0000E-03
+                        (  99.993% of Nominal)
+
+Pass   98               4.9994 at T =    1.0000E-03
+                        (  99.993% of Nominal)
+
+Pass   95               4.9994 at T =    1.0000E-03
+                        (  99.992% of Nominal)
+
+Pass   89               4.9993 at T =    1.0000E-03
+                        (  99.991% of Nominal)
+
+Pass   60               4.9993 at T =    1.0000E-03
+                        (  99.991% of Nominal)
+
+Pass   10               4.9993 at T =    1.0000E-03
+                        (  99.991% of Nominal)
+
+Pass   24               4.9993 at T =    1.0000E-03
+                        (  99.99 % of Nominal)
+
+Pass   84               4.9993 at T =    1.0000E-03
+                        (  99.989% of Nominal)
+
+Pass   37               4.9992 at T =    1.0000E-03
+                        (  99.989% of Nominal)
+
+Pass   16               4.9992 at T =    1.0000E-03
+                        (  99.989% of Nominal)
+
+Pass   74               4.9992 at T =    1.0000E-03
+                        (  99.989% of Nominal)
+
+Pass    7               4.9992 at T =    1.0000E-03
+                        (  99.988% of Nominal)
+
+Pass   79               4.9992 at T =    1.0000E-03
+                        (  99.988% of Nominal)
+
+Pass   44               4.9991 at T =    1.0000E-03
+                        (  99.987% of Nominal)
+
+Pass   53               4.9991 at T =    1.0000E-03
+                        (  99.986% of Nominal)
+
+Pass   83               4.9991 at T =    1.0000E-03
+                        (  99.986% of Nominal)
+
+Pass   40               4.9989 at T =    1.0000E-03
+                        (  99.982% of Nominal)
+
+
+
+          JOB CONCLUDED
+
+**** 04/08/19 17:38:29 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-MonteCarlo"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\MonteCarlo.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       13.92
+

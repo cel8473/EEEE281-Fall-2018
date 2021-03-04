@@ -1,0 +1,75 @@
+(ExpressProject "Lab5"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\lab5.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\lab5-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab5-pspicefiles\schematic1\lab5sim.sim"
+        (DisplayName "SCHEMATIC1-Lab5Sim")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\lab5-pspicefiles\schematic1\montecarlo.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab5-pspicefiles\schematic1\montecarlo.sim"
+        (DisplayName "SCHEMATIC1-MonteCarlo")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName "L:\CIRCUITS_1_LABS\PSPICE_LIBRARY_CIRCUITS1\SPECIAL.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "L:\CIRCUITS_1_Labs\pspice_LIBRARY_Circuits1")
+  (MPSSessionName "cel8473")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 376"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 632 52 467")
+        (Scroll "-154 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "E:\CIRCUITS-I\LAB5\LAB5.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

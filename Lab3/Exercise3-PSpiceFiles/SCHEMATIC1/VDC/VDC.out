@@ -1,0 +1,184 @@
+
+**** 03/04/19 19:55:01 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Lab3\exercise3-pspicefiles\schematic1\vdc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "VDC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source EXERCISE3
+V_V1         N00503 0 {Vsupply}
+R_R5         VB_VARIABLE V-_VARIABLE R_R5 {Rcommon} TC=0,0 
+.model        R_R5 RES R=1 DEV=10% TC1=0 TC2=0
+R_R4         0 VB_VARIABLE R_R4 {Rcommon} TC=0,0 
+.model        R_R4 RES R=1 DEV=10% TC1=0 TC2=0
+R_R6         VB_VARIABLE VA_VARIABLE R_R6 {R6} TC=0,0 
+.model        R_R6 RES R=1 DEV=10% TC1=0 TC2=0
+R_R3         VA_VARIABLE V+_VARIABLE R_R3 {Rcommon} TC=0,0 
+.model        R_R3 RES R=1 DEV=10% TC1=0 TC2=0
+R_RL         V-_VARIABLE V+_VARIABLE R_RL {RL} TC=0,0 
+.model        R_RL RES R=1 DEV=10% TC1=0 TC2=0
+R_R1         N00503 V+_VARIABLE R_R1 {Rcommon} TC=0,0 
+.model        R_R1 RES R=1 DEV=10% TC1=0 TC2=0
+R_R2         N00503 VA_VARIABLE R_R2 {Rcommon} TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+R_R10         VB_VOC VA_VOC R_R10 {R6} TC=0,0 
+.model        R_R10 RES R=1 DEV=10% TC1=0 TC2=0
+R_R11         0 VB_VOC R_R11 {Rcommon} TC=0,0 
+.model        R_R11 RES R=1 DEV=10% TC1=0 TC2=0
+R_R7         N01646 V+_VOC R_R7 {Rcommon} TC=0,0 
+.model        R_R7 RES R=1 DEV=10% TC1=0 TC2=0
+R_R8         N01646 VA_VOC R_R8 {Rcommon} TC=0,0 
+.model        R_R8 RES R=1 DEV=10% TC1=0 TC2=0
+R_R9         VA_VOC V+_VOC R_R9 {Rcommon} TC=0,0 
+.model        R_R9 RES R=1 DEV=10% TC1=0 TC2=0
+V_V2         N01646 0 {Vsupply}
+R_R17         0 VB_ISC R_R17 {Rcommon} TC=0,0 
+.model        R_R17 RES R=1 DEV=10% TC1=0 TC2=0
+R_R16         VB_ISC VA_ISC R_R16 {R6} TC=0,0 
+.model        R_R16 RES R=1 DEV=10% TC1=0 TC2=0
+R_R15         VA_ISC V+_ISC R_R15 {Rcommon} TC=0,0 
+.model        R_R15 RES R=1 DEV=10% TC1=0 TC2=0
+R_R14         N02338 VA_ISC R_R14 {Rcommon} TC=0,0 
+.model        R_R14 RES R=1 DEV=10% TC1=0 TC2=0
+R_R13         N02338 V+_ISC R_R13 {Rcommon} TC=0,0 
+.model        R_R13 RES R=1 DEV=10% TC1=0 TC2=0
+R_R18         VB_ISC V+_ISC R_R18 {Rcommon} TC=0,0 
+.model        R_R18 RES R=1 DEV=10% TC1=0 TC2=0
+V_V3         N02338 0 {Vsupply}
+R_R20         0 VA_TEST R_R20 {Rcommon} TC=0,0 
+.model        R_R20 RES R=1 DEV=10% TC1=0 TC2=0
+R_R21         VA_TEST V+_TEST R_R21 {Rcommon} TC=0,0 
+.model        R_R21 RES R=1 DEV=10% TC1=0 TC2=0
+R_R24         VB_TEST V-_TEST R_R24 {Rcommon} TC=0,0 
+.model        R_R24 RES R=1 DEV=10% TC1=0 TC2=0
+R_R23         0 VB_TEST R_R23 {Rcommon} TC=0,0 
+.model        R_R23 RES R=1 DEV=10% TC1=0 TC2=0
+R_R22         VB_TEST VA_TEST R_R22 {R6} TC=0,0 
+.model        R_R22 RES R=1 DEV=10% TC1=0 TC2=0
+R_R19         0 V+_TEST R_R19 {Rcommon} TC=0,0 
+.model        R_R19 RES R=1 DEV=10% TC1=0 TC2=0
+V_V4         V+_TEST V-_TEST 1
+.PARAM  r6=10k vsupply=12 rl=5.6k rcommon=1k
+
+**** RESUMING VDC.cir ****
+.END
+
+**** 03/04/19 19:55:01 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Lab3\exercise3-pspicefiles\schematic1\vdc.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R5            R_R4            R_R6            R_R3            
+           R    1               1               1               1            
+
+
+               R_RL            R_R1            R_R2            R_R10           
+           R    1               1               1               1            
+
+
+               R_R11           R_R7            R_R8            R_R9            
+           R    1               1               1               1            
+
+
+               R_R17           R_R16           R_R15           R_R14           
+           R    1               1               1               1            
+
+
+               R_R13           R_R18           R_R20           R_R21           
+           R    1               1               1               1            
+
+
+               R_R24           R_R23           R_R22           R_R19           
+           R    1               1               1               1            
+
+
+**** 03/04/19 19:55:01 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Lab3\exercise3-pspicefiles\schematic1\vdc.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00503)   12.0000 (N01646)   12.0000 (N02338)   12.0000 (V+_ISC)    9.0000     
+
+(V+_VOC)   11.6570 (VA_ISC)   10.2270 (VA_VOC)   11.3140 (VB_ISC)    4.7727     
+
+(VB_VOC)    1.0286 (V+_TEST)     .2500                   (V-_TEST)    -.7500    
+
+(VA_TEST)     .1023                   (VB_TEST)    -.3523                       
+
+(V+_VARIABLE)   10.8340               (V-_VARIABLE)    3.4986                   
+
+(VA_VARIABLE)   10.9770               (VB_VARIABLE)    2.1887               
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.189E-03
+    V_V2        -1.029E-03
+    V_V3        -4.773E-03
+    V_V4        -3.977E-04
+
+    TOTAL POWER DISSIPATION   9.63E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/04/19 19:55:01 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Lab3\exercise3-pspicefiles\schematic1\vdc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .14
+

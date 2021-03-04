@@ -1,0 +1,105 @@
+
+**** 02/05/19 14:25:51 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Larson_Lab1-PSpiceFiles\SCHEMATIC1\VDC.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "VDC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LARSON_LAB1
+R_R1         N00187 VA R_R1 5.6k TC=0,0 
+.model        R_R1 RES R=1 DEV=10% TC1=0 TC2=0
+R_R2         VA VB R_R2 5.6k TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+V_V1         N00187 0 5Vdc
+R_RL         0 VB R_RL 1k TC=0,0 
+.model        R_RL RES R=1 DEV=10% TC1=0 TC2=0
+
+**** RESUMING VDC.cir ****
+.END
+
+**** 02/05/19 14:25:51 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Larson_Lab1-PSpiceFiles\SCHEMATIC1\VDC.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R2            R_RL            
+           R    1               1               1            
+
+
+**** 02/05/19 14:25:51 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Larson_Lab1-PSpiceFiles\SCHEMATIC1\VDC.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VA)    2.7049  (   VB)     .4098  (N00187)    5.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.098E-04
+
+    TOTAL POWER DISSIPATION   2.05E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/05/19 14:25:51 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC"  [ E:\Circuits-I\Larson_Lab1-PSpiceFiles\SCHEMATIC1\VDC.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

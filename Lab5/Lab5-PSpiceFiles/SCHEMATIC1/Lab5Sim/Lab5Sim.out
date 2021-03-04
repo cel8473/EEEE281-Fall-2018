@@ -1,0 +1,133 @@
+
+**** 04/08/19 17:23:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab5Sim"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\Lab5Sim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Lab5Sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\cel8473\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB5
+R_R1         VSUPCIRCUIT1 VCCIRCUIT1 R_R1 {R} TC=0,0 
+.model        R_R1 RES R=1 DEV=10% TC1=0 TC2=0
+C_C1         0 VCCIRCUIT1 C_C1 {C}  TC=0,0 
+.model        C_C1 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0
+C_C2         VRCIRCUIT2 VSUPCIRCUIT2 C_C2 {C}  TC=0,0 
+.model        C_C2 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0
+R_R2         0 VRCIRCUIT2 R_R2 {R} TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+V_V1         VSUPCIRCUIT1 0  
++PULSE 0 5 0 1p 1p {PW} {PER}
+V_V2         VSUPCIRCUIT2 0  
++PULSE 0 5 0 1p 1p {PW} {PER}
+.PARAM  tau={r*c} per={twentytau} tentau={10*tau} freq={1/per} twentytau=
++ {20*tau} c=0.01u pw={tentau} r=1000000 runtotime={per}
+
+**** RESUMING Lab5Sim.cir ****
+.END
+
+**** 04/08/19 17:23:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab5Sim"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\Lab5Sim.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R2            
+           R    1               1            
+
+
+**** 04/08/19 17:23:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab5Sim"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\Lab5Sim.sim ] 
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               C_C1            C_C2            
+           C    1               1            
+
+
+**** 04/08/19 17:23:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab5Sim"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\Lab5Sim.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VCCIRCUIT1)    0.0000                (VRCIRCUIT2)    0.0000                    
+
+(VSUPCIRCUIT1)    0.0000              (VSUPCIRCUIT2)    0.0000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/08/19 17:23:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Lab5Sim"  [ E:\Circuits-I\Lab5\Lab5-PSpiceFiles\SCHEMATIC1\Lab5Sim.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .36
+
